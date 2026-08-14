@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -17,10 +17,13 @@
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="auth-buttons">
+                <button class="btn-sign-in" id="signInBtn">Sign In</button>
+                <button class="btn-create-account">Create Account</button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -31,14 +34,22 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Welcome to Techy</h1>
-            <p class="hero-subtitle">Innovation and Technology Solutions for Your Business</p>
-            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
-            <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Learn More</button>
-        </div>
-        <div class="hero-image">
-            <div class="floating-box">🚀</div>
+        <div class="hero-background"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to Techy</h1>
+                <p class="hero-subtitle">Innovative Technology Solutions for Your Digital Future</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-secondary">Explore More</button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-box box-1">🚀</div>
+                <div class="floating-box box-2">💡</div>
+                <div class="floating-box box-3">⚡</div>
+                <div class="floating-box box-4">🎨</div>
+            </div>
         </div>
     </section>
 
@@ -46,89 +57,68 @@
     <section id="features" class="features">
         <div class="container">
             <h2 class="section-title">Why Choose Techy?</h2>
+            <p class="section-subtitle">Cutting-edge solutions for modern businesses</p>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <h3>Fast Performance</h3>
-                    <p>Lightning-fast solutions designed for speed and efficiency</p>
+                    <h3>Lightning Fast</h3>
+                    <p>Experience blazing-fast performance optimized for speed and efficiency</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
-                    <h3>Secure & Reliable</h3>
-                    <p>Enterprise-grade security to protect your business</p>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level encryption and security protocols to protect your data</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
-                    <h3>Modern Design</h3>
-                    <p>Beautiful, responsive interfaces for all devices</p>
+                    <h3>Beautiful Design</h3>
+                    <p>Stunning, modern interfaces crafted with attention to detail</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📱</div>
-                    <h3>Mobile Ready</h3>
-                    <p>Perfectly optimized for smartphones and tablets</p>
+                    <h3>Mobile First</h3>
+                    <p>Fully responsive design that works perfectly on all devices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Global Scale</h3>
+                    <p>Infrastructure built to scale globally with zero downtime</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Powered</h3>
+                    <p>Intelligent automation using cutting-edge AI technology</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Web Development</h3>
-                    <p>Custom websites built with the latest technologies and best practices</p>
-                </div>
-                <div class="service-card">
-                    <h3>Mobile Apps</h3>
-                    <p>Native and cross-platform mobile applications for iOS and Android</p>
-                </div>
-                <div class="service-card">
-                    <h3>Cloud Solutions</h3>
-                    <p>Scalable cloud infrastructure and deployment services</p>
-                </div>
-                <div class="service-card">
-                    <h3>AI & Automation</h3>
-                    <p>Intelligent automation solutions powered by artificial intelligence</p>
-                </div>
-                <div class="service-card">
-                    <h3>Consulting</h3>
-                    <p>Expert technology consulting to drive digital transformation</p>
-                </div>
-                <div class="service-card">
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock technical support and maintenance</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Recent Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">Project 1</div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About Techy</h2>
+                    <p>We're a forward-thinking technology company dedicated to building innovative solutions that transform businesses. With years of experience and a passion for excellence, we deliver cutting-edge technology that drives real results.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>500+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h4>1000+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>50+</h4>
+                            <p>Team Members</p>
+                        </div>
                     </div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>Full-stack e-commerce solution with payment integration</p>
                 </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">Project 2</div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span>📊</span>
                     </div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>Real-time data visualization and reporting system</p>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <div class="placeholder-image">Project 3</div>
-                    </div>
-                    <h3>Mobile Banking App</h3>
-                    <p>Secure mobile application for financial transactions</p>
                 </div>
             </div>
         </div>
@@ -138,15 +128,21 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you. Send us a message!</p>
             <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
+                    <input type="text" placeholder="Subject" required>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    <textarea placeholder="Your Message" rows="6" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
@@ -159,20 +155,38 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Techy</h4>
-                    <p>Innovative technology solutions for modern businesses</p>
+                    <p>Innovative technology solutions for the modern world</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h4>Products</h4>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#services">Services</a></li>
+                        <li><a href="#">Web Platform</a></li>
+                        <li><a href="#">Mobile Apps</a></li>
+                        <li><a href="#">Cloud Services</a></li>
+                        <li><a href="#">API</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Email: info@techy.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -180,6 +194,48 @@
             </div>
         </div>
     </footer>
+
+    <!-- Sign In Modal -->
+    <div class="modal" id="signInModal">
+        <div class="modal-content">
+            <span class="close" id="closeSignIn">&times;</span>
+            <h2>Sign In</h2>
+            <form class="modal-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Sign In</button>
+            </form>
+            <p class="form-link">Don't have an account? <a href="#">Create one</a></p>
+        </div>
+    </div>
+
+    <!-- Create Account Modal -->
+    <div class="modal" id="createAccountModal">
+        <div class="modal-content">
+            <span class="close" id="closeCreateAccount">&times;</span>
+            <h2>Create Account</h2>
+            <form class="modal-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Create Account</button>
+            </form>
+            <p class="form-link">Already have an account? <a href="#">Sign in</a></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
