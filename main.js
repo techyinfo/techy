@@ -1,4 +1,13 @@
+const SUPABASE_URL = 'https://sdoydervkwfrowblhayk.supabase.co';
+const SUPABASE_KEY = 'sb_publishable__yCXg0V60PRSgeliDkkT5Q_rjBk3ZJV';
+
+const supabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
 // Global variables
+let currentPage = 'home';
 let currentPage = 'home';
 const pageContent = document.getElementById('pageContent');
 const navMenu = document.getElementById('navMenu');
@@ -100,8 +109,31 @@ function viewTutorial(id) {
     localStorage.setItem('selectedTutorial', id);
     window.location.href = 'tutorials.html#tutorial-' + id;
 }
+// Supabase login
+const loginForm = document.getElementById('loginForm');
 
-// Form submission handlers
+if (loginForm) {
+    loginForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email: email,
+            password: password
+        });
+
+        if (error) {
+            alert('Login failed: ' + error.message);
+            return;
+        }
+
+        alert('Welcome back!');
+        window.location.href = 'index.html';
+    });
+}
+});
 document.addEventListener('submit', function(e) {
     if (e.target.closest('form')) {
         e.preventDefault();
