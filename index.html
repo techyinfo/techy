@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techy - Modern Tech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">Techy</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Techy</h1>
+            <p class="hero-subtitle">Innovation and Technology Solutions for Your Business</p>
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+            <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+        </div>
+        <div class="hero-image">
+            <div class="floating-box">🚀</div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Techy?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Performance</h3>
+                    <p>Lightning-fast solutions designed for speed and efficiency</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Enterprise-grade security to protect your business</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Modern Design</h3>
+                    <p>Beautiful, responsive interfaces for all devices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Ready</h3>
+                    <p>Perfectly optimized for smartphones and tablets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with the latest technologies and best practices</p>
+                </div>
+                <div class="service-card">
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android</p>
+                </div>
+                <div class="service-card">
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and deployment services</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI & Automation</h3>
+                    <p>Intelligent automation solutions powered by artificial intelligence</p>
+                </div>
+                <div class="service-card">
+                    <h3>Consulting</h3>
+                    <p>Expert technology consulting to drive digital transformation</p>
+                </div>
+                <div class="service-card">
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock technical support and maintenance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">Recent Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">Project 1</div>
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Full-stack e-commerce solution with payment integration</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">Project 2</div>
+                    </div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time data visualization and reporting system</p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <div class="placeholder-image">Project 3</div>
+                    </div>
+                    <h3>Mobile Banking App</h3>
+                    <p>Secure mobile application for financial transactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Techy</h4>
+                    <p>Innovative technology solutions for modern businesses</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@techy.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Techy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
