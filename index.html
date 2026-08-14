@@ -1,12 +1,21 @@
+name=index.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techy - Modern Tech Solutions</title>
+    <title>Techy - Learn, Build, Create</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top Search Bar -->
+    <div class="top-bar">
+        <div class="search-container">
+            <input type="text" id="searchInput" class="search-bar" placeholder="Search programming topics...">
+            <button class="search-btn">🔍</button>
+        </div>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
@@ -16,13 +25,12 @@
             </div>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#tutorials" class="nav-link">Tutorials</a></li>
+                <li><a href="#community" class="nav-link">Community</a></li>
+                <li><a href="#ai" class="nav-link">AI</a></li>
             </ul>
             <div class="auth-buttons">
-                <button class="btn-sign-in" id="signInBtn">Sign In</button>
-                <button class="btn-create-account">Create Account</button>
+                <button class="btn-login" id="loginBtn">Login</button>
             </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
@@ -34,21 +42,13 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Welcome to Techy</h1>
-                <p class="hero-subtitle">Innovative Technology Solutions for Your Digital Future</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary">Get Started</button>
-                    <button class="btn btn-secondary">Explore More</button>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-box box-1">🚀</div>
-                <div class="floating-box box-2">💡</div>
-                <div class="floating-box box-3">⚡</div>
-                <div class="floating-box box-4">🎨</div>
+        <div class="hero-panel">
+            <h1 class="hero-title">Welcome to Techy</h1>
+            <p class="hero-subtitle">Learn, build, create.</p>
+            <p class="hero-description">Master programming, discover cutting-edge technology, and join a thriving community of developers.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large">Get Started</button>
+                <button class="btn btn-secondary btn-large" id="signInBtn">Sign In</button>
             </div>
         </div>
     </section>
@@ -57,95 +57,164 @@
     <section id="features" class="features">
         <div class="container">
             <h2 class="section-title">Why Choose Techy?</h2>
-            <p class="section-subtitle">Cutting-edge solutions for modern businesses</p>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Experience blazing-fast performance optimized for speed and efficiency</p>
+                    <div class="feature-icon">📚</div>
+                    <h3>Comprehensive Tutorials</h3>
+                    <p>Learn from beginner to advanced levels with structured courses</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Enterprise Security</h3>
-                    <p>Bank-level encryption and security protocols to protect your data</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Beautiful Design</h3>
-                    <p>Stunning, modern interfaces crafted with attention to detail</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Mobile First</h3>
-                    <p>Fully responsive design that works perfectly on all devices</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Global Scale</h3>
-                    <p>Infrastructure built to scale globally with zero downtime</p>
+                    <div class="feature-icon">🤝</div>
+                    <h3>Active Community</h3>
+                    <p>Connect with thousands of developers and share your knowledge</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🤖</div>
-                    <h3>AI Powered</h3>
-                    <p>Intelligent automation using cutting-edge AI technology</p>
+                    <h3>AI-Powered Learning</h3>
+                    <p>Personalized recommendations and intelligent code assistance</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast & Responsive</h3>
+                    <p>Lightning-fast platform optimized for all devices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Ready</h3>
+                    <p>Learn on the go with our fully responsive design</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Project-Based Learning</h3>
+                    <p>Build real projects and showcase your portfolio</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Latest Tutorials Section -->
+    <section id="tutorials" class="tutorials">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">About Techy</h2>
-                    <p>We're a forward-thinking technology company dedicated to building innovative solutions that transform businesses. With years of experience and a passion for excellence, we deliver cutting-edge technology that drives real results.</p>
-                    <div class="stats">
-                        <div class="stat">
-                            <h4>500+</h4>
-                            <p>Happy Clients</p>
-                        </div>
-                        <div class="stat">
-                            <h4>1000+</h4>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h4>50+</h4>
-                            <p>Team Members</p>
-                        </div>
+            <h2 class="section-title">Latest Tutorials</h2>
+            <div class="tutorials-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-badge">JavaScript</div>
+                    <h3>Modern JavaScript ES2024</h3>
+                    <p>Learn the latest features and best practices in JavaScript development</p>
+                    <div class="tutorial-meta">
+                        <span>⏱️ 2h 30m</span>
+                        <span>👥 5.2k students</span>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <span>📊</span>
+                <div class="tutorial-card">
+                    <div class="tutorial-badge">React</div>
+                    <h3>React Hooks Mastery</h3>
+                    <p>Deep dive into React Hooks and build performant applications</p>
+                    <div class="tutorial-meta">
+                        <span>⏱️ 3h 15m</span>
+                        <span>👥 4.8k students</span>
+                    </div>
+                </div>
+                <div class="tutorial-card">
+                    <div class="tutorial-badge">Python</div>
+                    <h3>Python for Data Science</h3>
+                    <p>Master data analysis and visualization with Python libraries</p>
+                    <div class="tutorial-meta">
+                        <span>⏱️ 4h 45m</span>
+                        <span>👥 6.1k students</span>
+                    </div>
+                </div>
+                <div class="tutorial-card">
+                    <div class="tutorial-badge">Web Dev</div>
+                    <h3>Full-Stack Web Development</h3>
+                    <p>Build complete web applications from frontend to backend</p>
+                    <div class="tutorial-meta">
+                        <span>⏱️ 6h 20m</span>
+                        <span>👥 7.3k students</span>
+                    </div>
+                </div>
+                <div class="tutorial-card">
+                    <div class="tutorial-badge">DevOps</div>
+                    <h3>Docker & Kubernetes Guide</h3>
+                    <p>Learn containerization and orchestration for modern deployments</p>
+                    <div class="tutorial-meta">
+                        <span>⏱️ 3h 50m</span>
+                        <span>👥 3.9k students</span>
+                    </div>
+                </div>
+                <div class="tutorial-card">
+                    <div class="tutorial-badge">AI/ML</div>
+                    <h3>Introduction to Machine Learning</h3>
+                    <p>Get started with ML algorithms and neural networks</p>
+                    <div class="tutorial-meta">
+                        <span>⏱️ 5h 10m</span>
+                        <span>👥 4.6k students</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Popular Topics Section -->
+    <section id="topics" class="topics">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">We'd love to hear from you. Send us a message!</p>
-            <form class="contact-form" id="contactForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
+            <h2 class="section-title">Popular Topics</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <h3>Web Development</h3>
+                    <span class="topic-count">2.4k posts</span>
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Subject" required>
+                <div class="topic-card">
+                    <h3>Machine Learning</h3>
+                    <span class="topic-count">1.8k posts</span>
                 </div>
-                <div class="form-group">
-                    <textarea placeholder="Your Message" rows="6" required></textarea>
+                <div class="topic-card">
+                    <h3>Mobile Development</h3>
+                    <span class="topic-count">1.6k posts</span>
                 </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+                <div class="topic-card">
+                    <h3>Cloud Computing</h3>
+                    <span class="topic-count">1.3k posts</span>
+                </div>
+                <div class="topic-card">
+                    <h3>Cybersecurity</h3>
+                    <span class="topic-count">1.1k posts</span>
+                </div>
+                <div class="topic-card">
+                    <h3>DevOps</h3>
+                    <span class="topic-count">890 posts</span>
+                </div>
+                <div class="topic-card">
+                    <h3>Game Development</h3>
+                    <span class="topic-count">1.2k posts</span>
+                </div>
+                <div class="topic-card">
+                    <h3>Data Science</h3>
+                    <span class="topic-count">1.5k posts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <div class="community-content">
+                <p>Connect with over 100k+ developers worldwide. Share your knowledge, ask questions, and grow together.</p>
+                <button class="btn btn-primary btn-large">Join Community</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Section -->
+    <section id="ai" class="ai-section">
+        <div class="container">
+            <h2 class="section-title">AI-Powered Learning</h2>
+            <div class="ai-content">
+                <p>Our AI assistant helps you learn faster with personalized recommendations, code reviews, and intelligent tutoring.</p>
+                <button class="btn btn-primary btn-large">Try AI Assistant</button>
+            </div>
         </div>
     </section>
 
@@ -155,37 +224,22 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Techy</h4>
-                    <p>Innovative technology solutions for the modern world</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Twitter</a>
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">GitHub</a>
-                    </div>
+                    <p>Learn, Build, Create</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Products</h4>
+                    <h4>Product</h4>
                     <ul>
-                        <li><a href="#">Web Platform</a></li>
-                        <li><a href="#">Mobile Apps</a></li>
-                        <li><a href="#">Cloud Services</a></li>
-                        <li><a href="#">API</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">AI Assistant</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">About</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Careers</a></li>
                         <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -195,11 +249,11 @@
         </div>
     </footer>
 
-    <!-- Sign In Modal -->
-    <div class="modal" id="signInModal">
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
         <div class="modal-content">
-            <span class="close" id="closeSignIn">&times;</span>
-            <h2>Sign In</h2>
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login to Techy</h2>
             <form class="modal-form">
                 <div class="form-group">
                     <input type="email" placeholder="Email Address" required>
@@ -207,16 +261,16 @@
                 <div class="form-group">
                     <input type="password" placeholder="Password" required>
                 </div>
-                <button type="submit" class="btn btn-primary full-width">Sign In</button>
+                <button type="submit" class="btn btn-primary full-width">Login</button>
             </form>
-            <p class="form-link">Don't have an account? <a href="#">Create one</a></p>
+            <p class="form-link">Don't have an account? <a href="#" onclick="switchModal()">Create one</a></p>
         </div>
     </div>
 
     <!-- Create Account Modal -->
-    <div class="modal" id="createAccountModal">
+    <div class="modal" id="createModal">
         <div class="modal-content">
-            <span class="close" id="closeCreateAccount">&times;</span>
+            <span class="close" id="closeCreate">&times;</span>
             <h2>Create Account</h2>
             <form class="modal-form">
                 <div class="form-group">
@@ -233,7 +287,7 @@
                 </div>
                 <button type="submit" class="btn btn-primary full-width">Create Account</button>
             </form>
-            <p class="form-link">Already have an account? <a href="#">Sign in</a></p>
+            <p class="form-link">Already have an account? <a href="#" onclick="switchModal()">Sign in</a></p>
         </div>
     </div>
 
