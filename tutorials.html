@@ -1,1 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorials - Techy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">Techy</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="tutorials.html" class="nav-link active">Tutorials</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="community.html" class="nav-link">Community</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search tutorials and news...">
+        <button class="search-btn" id="searchBtn">🔍</button>
+    </div>
+
+    <section class="tutorials-page">
+        <div class="container">
+            <h1 class="page-title">Programming Tutorials</h1>
+            <p class="page-subtitle">Master programming with our comprehensive, original tutorials</p>
+
+            <div class="tutorial-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="html">HTML</button>
+                <button class="filter-btn" data-filter="css">CSS</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="cpp">C++</button>
+                <button class="filter-btn" data-filter="git">Git</button>
+                <button class="filter-btn" data-filter="github">GitHub</button>
+                <button class="filter-btn" data-filter="linux">Linux</button>
+                <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+            </div>
+
+            <div class="tutorials-grid" id="tutorialsGrid">
+                <!-- Tutorials will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="tutorialModal">
+        <div class="modal-content modal-large">
+            <span class="close" id="closeTutorial">&times;</span>
+            <div class="modal-header">
+                <span class="tutorial-category" id="modalCategory">HTML</span>
+            </div>
+            <h2 id="modalTitle">Tutorial Title</h2>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Techy</h4>
+                    <p>Learn. Build. Create.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="tutorials.html#html">HTML</a></li>
+                        <li><a href="tutorials.html#css">CSS</a></li>
+                        <li><a href="tutorials.html#javascript">JavaScript</a></li>
+                        <li><a href="tutorials.html#python">Python</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="https://discord.com" target="_blank">Discord</a></li>
+                        <li><a href="mailto:info@techy.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Techy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="searchModal">
+        <div class="modal-content modal-large">
+            <span class="close" id="closeSearch">&times;</span>
+            <h2>Search Results</h2>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        const tutorialsGrid = document.getElementById('tutorialsGrid');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const tutorialModal = document.getElementById('tutorialModal');
+        const closeTutorial = document.getElementById('closeTutorial');
+        let currentFilter = 'all';
+
+        function renderTutorials(filter = 'all') {
+            const filtered = filter === 'all' ? tutorials : tutorials.filter(t => t.category === filter);
+            tutorialsGrid.innerHTML = filtered.map(tutorial => `
+                <div class="tutorial-card" onclick="openTutorial(${tutorial.id})">
+                    <span class="tutorial-badge">${tutorial.badge}</span>
+                    <h3>${tutorial.title}</h3>
+                    <p>${tutorial.description}</p>
+                    <div class="tutorial-meta">
+                        <span>${tutorial.difficulty}</span>
+                        <span>${tutorial.duration}</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openTutorial(tutorialId) {
+            const tutorial = tutorials.find(t => t.id === tutorialId);
+            if (tutorial) {
+                document.getElementById('modalCategory').textContent = tutorial.badge;
+                document.getElementById('modalTitle').textContent = tutorial.title;
+                document.getElementById('modalBody').innerHTML = tutorial.content;
+                tutorialModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        closeTutorial.addEventListener('click', () => {
+            tutorialModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === tutorialModal) {
+                tutorialModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                renderTutorials(currentFilter);
+            });
+        });
+
+        renderTutorials();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
