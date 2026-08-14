@@ -1,1 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techy - Learn, Build, Create</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">Techy</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="community.html" class="nav-link">Community</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search tutorials and news...">
+        <button class="search-btn" id="searchBtn">🔍</button>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to Techy</h1>
+            <p class="hero-subtitle">Learn Programming, Master Technology, Build Your Future</p>
+            <p class="hero-description">Explore comprehensive tutorials, stay updated with tech news, and join a community of passionate developers.</p>
+            <div class="hero-buttons">
+                <a href="tutorials.html" class="btn btn-primary">Explore Tutorials</a>
+                <a href="news.html" class="btn btn-secondary">Read News</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Techy?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Original Tutorials</h3>
+                    <p>Written by experienced developers with real-world examples and best practices</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Learning</h3>
+                    <p>Structured content designed to help you learn efficiently and retain knowledge</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Secure & Updated</h3>
+                    <p>Security-focused tutorials and regularly updated tech news from trusted sources</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3>Community Driven</h3>
+                    <p>Connect with developers worldwide and share your knowledge and experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="latest-tutorials">
+        <div class="container">
+            <h2 class="section-title">Latest Tutorials</h2>
+            <div class="tutorials-grid">
+                <div class="tutorial-card" onclick="viewTutorial(1)">
+                    <span class="tutorial-badge">HTML</span>
+                    <h3>HTML Fundamentals</h3>
+                    <p>Learn the core building blocks of web pages</p>
+                    <div class="tutorial-meta">
+                        <span>Beginner</span>
+                        <span>15 min</span>
+                    </div>
+                </div>
+                <div class="tutorial-card" onclick="viewTutorial(6)">
+                    <span class="tutorial-badge">JavaScript</span>
+                    <h3>ES6: Modern JavaScript</h3>
+                    <p>Learn modern JavaScript features and syntax</p>
+                    <div class="tutorial-meta">
+                        <span>Intermediate</span>
+                        <span>28 min</span>
+                    </div>
+                </div>
+                <div class="tutorial-card" onclick="viewTutorial(9)">
+                    <span class="tutorial-badge">Python</span>
+                    <h3>Python Fundamentals</h3>
+                    <p>Get started with Python basics</p>
+                    <div class="tutorial-meta">
+                        <span>Beginner</span>
+                        <span>25 min</span>
+                    </div>
+                </div>
+            </div>
+            <div class="center-content">
+                <a href="tutorials.html" class="btn btn-primary">View All Tutorials</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="community-section">
+        <div class="container">
+            <h2 class="section-title">Join Our Community</h2>
+            <p class="community-description">Connect with thousands of developers, share your projects, ask questions, and grow together.</p>
+            <div class="community-stats">
+                <div class="stat">
+                    <h3>10K+</h3>
+                    <p>Active Members</p>
+                </div>
+                <div class="stat">
+                    <h3>500+</h3>
+                    <p>Tutorials</p>
+                </div>
+                <div class="stat">
+                    <h3>100+</h3>
+                    <p>News Articles</p>
+                </div>
+            </div>
+            <a href="signup.html" class="btn btn-primary btn-large">Join Community Now</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Techy</h4>
+                    <p>Learn. Build. Create. Master modern technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="tutorials.html#html">HTML</a></li>
+                        <li><a href="tutorials.html#css">CSS</a></li>
+                        <li><a href="tutorials.html#javascript">JavaScript</a></li>
+                        <li><a href="tutorials.html#python">Python</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="https://discord.com" target="_blank">Discord</a></li>
+                        <li><a href="mailto:info@techy.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Techy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="searchModal">
+        <div class="modal-content modal-large">
+            <span class="close" id="closeSearch">&times;</span>
+            <h2>Search Results</h2>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
