@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News - Techy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">Techy</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="tutorials.html" class="nav-link">Tutorials</a></li>
+                <li><a href="news.html" class="nav-link active">News</a></li>
+                <li><a href="community.html" class="nav-link">Community</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="signup.html" class="btn-signup">Sign Up</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search tutorials and news...">
+        <button class="search-btn" id="searchBtn">🔍</button>
+    </div>
+
+    <section class="news-page">
+        <div class="container">
+            <h1 class="page-title">Tech News</h1>
+            <p class="page-subtitle">Stay updated with the latest technology news and developments</p>
+
+            <div class="news-grid" id="newsGrid">
+                <!-- News will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Techy</h4>
+                    <p>Learn. Build. Create.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="community.html">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="tutorials.html#html">HTML</a></li>
+                        <li><a href="tutorials.html#css">CSS</a></li>
+                        <li><a href="tutorials.html#javascript">JavaScript</a></li>
+                        <li><a href="tutorials.html#python">Python</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                        <li><a href="https://discord.com" target="_blank">Discord</a></li>
+                        <li><a href="mailto:info@techy.com">Email</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Techy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="searchModal">
+        <div class="modal-content modal-large">
+            <span class="close" id="closeSearch">&times;</span>
+            <h2>Search Results</h2>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        const newsGrid = document.getElementById('newsGrid');
+
+        function renderNews() {
+            newsGrid.innerHTML = newsArticles.map(article => `
+                <div class="news-card">
+                    <div class="news-image">${article.image}</div>
+                    <div class="news-content">
+                        <span class="news-date">${article.date}</span>
+                        <h3>${article.title}</h3>
+                        <p>${article.summary}</p>
+                        <a href="${article.sourceUrl}" target="_blank" class="news-link">Read on ${article.source} →</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        renderNews();
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
